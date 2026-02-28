@@ -12,42 +12,6 @@
   }
 
   /**
-   * Scroll top button
-   */
-  let scrollTop = document.querySelector(".scroll-top");
-
-  function toggleScrollTop() {
-    if (scrollTop) {
-      window.scrollY > 100
-        ? scrollTop.classList.add("active")
-        : scrollTop.classList.remove("active");
-    }
-  }
-  scrollTop.addEventListener("click", (e) => {
-    e.preventDefault();
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  });
-
-  window.addEventListener("load", toggleScrollTop);
-  document.addEventListener("scroll", toggleScrollTop);
-
-  /**
-   * Animation on scroll function and init
-   */
-  function aosInit() {
-    AOS.init({
-      duration: 600,
-      easing: "ease-in-out",
-      once: true,
-      mirror: false,
-    });
-  }
-  window.addEventListener("load", aosInit);
-
-  /**
    * Correct scrolling position upon page load for URLs containing hash links.
    */
   window.addEventListener("load", function (e) {
@@ -66,14 +30,20 @@
   });
 })();
 
+/**
+ * Load project images with gradient overlay
+ */
 document.addEventListener("DOMContentLoaded", function () {
   document.querySelectorAll(".project-image").forEach((div) => {
     const imgSrc = div.dataset.imageSrc;
     if (imgSrc) {
       div.style.background = `
-          linear-gradient(to bottom, rgba(16,16,16,0.5), rgba(16,16,16,1)),
-          url('${imgSrc}')
-        `;
+        linear-gradient(to bottom, rgba(10,10,10,0.3), rgba(10,10,10,0.7)),
+        url('${imgSrc}')
+      `;
+      div.style.backgroundSize = "cover";
+      div.style.backgroundPosition = "center";
+      div.style.backgroundRepeat = "no-repeat";
     }
   });
 });
