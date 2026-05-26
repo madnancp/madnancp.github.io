@@ -35,27 +35,29 @@ body {
 }
 
 header {
+  padding-bottom: 3rem;
+  border-bottom: 1px solid var(--rule);
+  margin-bottom: 1rem;
+}
+
+.intro {
   display: flex;
   align-items: flex-start;
   gap: 1.5rem;
-  padding-bottom: 3rem;
-  border-bottom: 1px solid var(--rule);
-  margin-bottom: 3.5rem;
+  margin-bottom: 2rem;
 }
 
 .profile-img {
-  width: 64px;
-  height: 64px;
+  width: 58px;
+  height: 58px;
   border-radius: 50%;
   object-fit: cover;
   flex-shrink: 0;
-  margin-top: 0.2rem;
-  filter: grayscale(15%);
 }
 
 .header-text h1 {
   font-size: 1.5rem;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: -0.015em;
   line-height: 1.15;
   margin-bottom: 0.15rem;
@@ -65,14 +67,12 @@ header {
   font-size: 0.88rem;
   color: var(--ink-faint);
   letter-spacing: 0.02em;
-  margin-bottom: 2rem;
 }
 
-.header-text .bio {
-  font-size: 1rem;
+.current-role-title {
+  font-size: 0.95rem;
   color: var(--ink-mid);
-  line-height: 1.75;
-  max-width: 46ch;
+  line-height: 1.7;
 }
 
 section {
