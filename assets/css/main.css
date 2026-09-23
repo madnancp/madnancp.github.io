@@ -48,8 +48,8 @@ header {
 }
 
 .profile-img {
-  width: 100px;
-  height: 100px;
+  width: 130px;
+  height: 130px;
   object-fit: cover;
   flex-shrink: 0;
 }
@@ -172,8 +172,8 @@ h2 {
   }
 
   .profile-img {
-    width: 54px;
-    height: 54px;
+    width: 100px;
+    height: 100px;
   }
 
   .role-head {
@@ -194,17 +194,22 @@ h2 {
 .links {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem 1.5rem;
+  gap: 0rem 1.5rem;
 }
 
-.links a {
+a {
   color: var(--ink-mid);
   text-decoration: none;
   border-bottom: 1px solid var(--rule);
   transition: color 0.15s, border-color 0.15s;
+  padding-bottom: 10px;
 }
 
-.links a:hover {
+a:hover {
   color: var(--ink);
   border-color: var(--ink-mid);
+}
+
+.focus-text {
+  font-family: monospace;
 }
